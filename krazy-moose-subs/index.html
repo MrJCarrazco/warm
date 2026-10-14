@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Krazy Moose Subs - a website we already built for you</title>
+<meta name="description" content="Prepared for Krazy Moose Subs by Digital Consulting Studios, Wasilla AK.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#f3f5f9; --dim:#9aa6bd; --bg:#070b14; --card:rgba(255,255,255,.045);
+  --line:rgba(255,255,255,.1); --hot:#ff6a3d; --cool:#4dd4ff; --ok:#44e0a0;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--ink); overflow-x:hidden;
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:-30% -10% auto -10%;height:120vh;z-index:0;
+  background:
+    radial-gradient(42vw 42vw at 18% 12%,rgba(255,106,61,.20),transparent 62%),
+    radial-gradient(38vw 38vw at 84% 28%,rgba(77,212,255,.16),transparent 60%),
+    radial-gradient(44vw 44vw at 52% 86%,rgba(68,224,160,.10),transparent 64%);
+  filter:blur(8px);animation:drift 24s ease-in-out infinite alternate;
+}
+@keyframes drift{to{transform:translate3d(0,-5%,0) scale(1.12) rotate(4deg)}}
+.wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 22px}
+section{padding:58px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border:0}
+.eyebrow{
+  font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hot);
+  font-weight:700;margin-bottom:14px
+}
+h1{font-size:clamp(32px,7.4vw,56px);line-height:1.04;letter-spacing:-.025em;font-weight:800}
+h1 em{font-style:normal;background:linear-gradient(100deg,var(--hot),#ffb37a 60%);
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+h2{font-size:clamp(22px,4.4vw,31px);line-height:1.15;letter-spacing:-.02em;
+  font-weight:750;margin-bottom:18px}
+h3{font-size:16px;font-weight:700;margin-bottom:6px}
+p{color:var(--dim);margin-bottom:14px;max-width:60ch}
+p strong,li strong{color:var(--ink);font-weight:650}
+.lede{font-size:clamp(17px,2.6vw,20px);color:#c9d3e4;margin-top:20px}
+header{padding:76px 0 52px}
+.badge{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:650;
+  color:var(--dim);border:1px solid var(--line);background:var(--card);
+  padding:7px 13px;border-radius:999px;margin-bottom:26px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);
+  box-shadow:0 0 0 0 rgba(68,224,160,.7);animation:pulse 2.4s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(68,224,160,0)}100%{box-shadow:0 0 0 0 rgba(68,224,160,0)}}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+a.btn{
+  display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-weight:700;
+  font-size:16px;padding:16px 24px;border-radius:13px;transition:.18s ease;
+  background:linear-gradient(100deg,var(--hot),#ff8f5e);color:#120600;
+  box-shadow:0 10px 30px -10px rgba(255,106,61,.65)
+}
+a.btn.ghost{background:var(--card);color:var(--ink);border:1px solid var(--line);
+  box-shadow:none}
+a.btn:active{transform:translateY(1px)}
+@media(hover:hover){a.btn:hover{transform:translateY(-2px)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;
+  padding:22px;margin-bottom:14px}
+.found{border-left:3px solid var(--hot)}
+.grid{display:grid;gap:14px}
+@media(min-width:620px){.grid.two{grid-template-columns:1fr 1fr}}
+.price{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  margin-bottom:8px}
+.price b{font-size:21px;letter-spacing:-.02em}
+.price span{font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.1em}
+.frame{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff;
+  margin:20px 0;box-shadow:0 26px 60px -28px rgba(0,0,0,.85)}
+.frame .bar{display:flex;gap:6px;padding:11px 14px;background:#1b2231;align-items:center}
+.frame .bar i{width:10px;height:10px;border-radius:50%;background:#394458;display:block}
+.frame .bar small{margin-left:10px;color:#8794ab;font-size:11px;font-family:ui-monospace,monospace}
+.frame iframe{display:block;width:100%;height:520px;border:0;background:#fff}
+ol.steps{list-style:none;counter-reset:s}
+ol.steps li{counter-increment:s;position:relative;padding-left:44px;margin-bottom:18px;
+  color:var(--dim)}
+ol.steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;
+  height:30px;border-radius:50%;background:var(--card);border:1px solid var(--line);
+  color:var(--ink);font-weight:700;font-size:13px;display:grid;place-items:center}
+details{border-bottom:1px solid var(--line);padding:15px 0}
+details summary{cursor:pointer;font-weight:650;list-style:none;display:flex;
+  justify-content:space-between;gap:14px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--hot);font-weight:800;font-size:19px;
+  line-height:1}
+details[open] summary::after{content:"\2212"}
+details p{margin:12px 0 2px}
+.proof{display:flex;align-items:center;justify-content:space-between;gap:16px;
+  text-decoration:none;color:inherit}
+.proof small{display:block;color:var(--dim);font-size:13px;margin-top:3px}
+.proof em{font-style:normal;color:var(--cool);font-size:13px;font-weight:650;white-space:nowrap}
+.stop{border:1px dashed var(--line);border-radius:14px;padding:18px;margin-top:26px}
+.stop p{margin:0;font-size:14px}
+footer{padding:40px 0 60px;color:#6f7b92;font-size:12.5px;line-height:1.75}
+footer a{color:#8794ab}
+.reveal{opacity:0;transform:translateY(16px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease,transform .6s ease}
+.card.hot{border-color:rgba(255,106,61,.45);background:linear-gradient(180deg,rgba(255,106,61,.09),rgba(255,255,255,.03))}
+.card.up{border-color:rgba(77,212,255,.4);background:linear-gradient(180deg,rgba(77,212,255,.08),rgba(255,255,255,.03))}
+.stack{display:grid;gap:12px;margin-top:22px}
+.stack .row{display:flex;gap:14px;align-items:flex-start;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:17px 19px}
+.stack .tick{flex:0 0 24px;height:24px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(68,224,160,.14);color:var(--ok);font-weight:800;font-size:13px;margin-top:1px}
+.stack h3{margin-bottom:3px}
+.stack p{margin:0;font-size:14.5px}
+@media(prefers-reduced-motion:reduce){
+  body::before{animation:none}.reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge"><span class="dot"></span> Prepared for Krazy Moose Subs &middot; October 13, 2026</div>
+  <h1>Krazy Moose Subs, <em>your website is already built.</em></h1>
+  <p class="lede">You didn't ask for it. It's free to look at and you owe nothing. This page tells you what I found, what it costs, and exactly what a ten-minute call would cover &mdash; so you can decide before you talk to anybody.</p>
+  <div class="cta">
+    <a class="btn" href="https://mrjcarrazco.github.io/krazy-moose-demo/" target="_blank" rel="noopener">See the sample site</a>
+    <a class="btn ghost" href="#call">What a call covers</a>
+  </div>
+</header>
+
+<section class="reveal">
+  <div class="eyebrow">What I found</div>
+  <h2>The reason I called</h2>
+  <div class="card found"><p style="margin:0"><strong>your domain krazymoosesubs.com doesn&#x27;t have a site on it anymore - it&#x27;s a 114-byte page that bounces visitors to a for-sale lander.</strong></p></div>
+  <p>Checked October 13, 2026. If any of that is already fixed or I have it wrong, tell me and
+  I'll say so plainly &mdash; a pitch built on a wrong fact is worse than no pitch.</p>
+</section>
+
+<section class="reveal">
+  <div class="eyebrow">What I built</div>
+  <h2>Your sample site</h2>
+  <p>Already live, already mobile. Your real phone number is on it &mdash; tap it and it
+  dials Krazy Moose Subs. It is marked as a demo and hidden from search engines.</p>
+  <div class="frame">
+    <div class="bar"><i></i><i></i><i></i><small>https://mrjcarrazco.github.io/krazy-moose-demo/</small></div>
+    <iframe src="https://mrjcarrazco.github.io/krazy-moose-demo/" loading="lazy" title="Sample site for Krazy Moose Subs"></iframe>
+  </div>
+  <div class="cta"><a class="btn" href="https://mrjcarrazco.github.io/krazy-moose-demo/" target="_blank" rel="noopener">Open it full screen</a></div>
+</section>
+
+<section class="reveal">
+  <div class="eyebrow">Proof</div>
+  <h2>Valley businesses, live right now</h2>
+  <p>Don't take my word for it. These are real customers you can call and ask about me.</p>
+  <div class="card"><a class="proof" href="https://beautyluxeak.com" target="_blank" rel="noopener">
+    <span><h3>Beauty Luxe AK</h3><small>lash studio, Wasilla - online booking built in</small></span>
+    <em>View live &rarr;</em></a></div>
+<div class="card"><a class="proof" href="https://mrjcarrazco.github.io/afivestar/" target="_blank" rel="noopener">
+    <span><h3>A Five Star Drywall</h3><small>Wasilla contractor, English + Spanish</small></span>
+    <em>View live &rarr;</em></a></div>
+<div class="card"><a class="proof" href="https://mrjcarrazco.github.io/digital-consulting-studios/" target="_blank" rel="noopener">
+    <span><h3>Digital Consulting Studios</h3><small>our own studio site - pricing and contact</small></span>
+    <em>View live &rarr;</em></a></div>
+</section>
+
+<section class="reveal">
+  <div class="eyebrow">Price, before you ask</div>
+  <h2>Two ways to start</h2>
+  <p>No discovery-call games, no "let's get on a call to discuss budget." Here are the numbers.</p>
+  <div class="grid two">
+    <div class="card hot">
+      <div class="price"><b>$1,500 one time</b><span>own it outright</span></div>
+      <p style="margin:0">5-section custom site, mobile-perfect, tap-to-call, lead form, Google map, SEO basics. Live in under a week. Includes your first 30 days of Care free.</p>
+    </div>
+    <div class="card hot">
+      <div class="price"><b>$249/mo, no money down</b><span>nothing down</span></div>
+      <p style="margin:0">I build it, host it, keep it current. After 12 payments it is yours outright. 12-month minimum.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-top:42px">Then keeping it alive</h2>
+  <p>A website that nobody updates is a brochure from 2019. This is the part most shops
+  forget to budget for, so I'd rather say it now than surprise you later.</p>
+  <div class="grid two">
+    <div class="card">
+      <div class="price"><b>$99/mo Care</b><span>the upkeep plan</span></div>
+      <p style="margin:0">Hosting, unlimited small edits, backups, uptime watch, monthly health report. Cancel anytime.</p>
+      <p style="margin:10px 0 0;font-size:14px"><strong>Free for your first 30 days</strong>
+      with any build. You text me a price change or a new photo; I make the change. You
+      never log into anything.</p>
+    </div>
+    <div class="card up">
+      <div class="price"><b>$499/mo Growth</b><span>most shops add this</span></div>
+      <p style="margin:0">Everything in Care, PLUS a brand-new local-SEO page every month (&quot;brake repair Wasilla&quot;), your Google Business Profile set up and managed, reviews monitored with replies drafted for you, and a strategy call every quarter. No contract.</p>
+      <p style="margin:10px 0 0;font-size:14px">Two Growth clients is a thousand dollars a month of work I actually do - new pages, your Google listing, your reviews. That is the part that keeps the phone ringing after the site is built.</p>
+    </div>
+  </div>
+  <div class="stop"><p><strong>Nothing is ever due before work is delivered.</strong>
+  No deposit, no bank details, and I will never ask you for a social security number.
+  If anyone claiming to be me ever does, it isn't me.</p></div>
+</section>
+
+<section class="reveal">
+  <div class="eyebrow">Why say yes now</div>
+  <h2>What you get for saying yes</h2>
+  <p>None of this is a discount off the price &mdash; I don't cut the build price for
+  anybody, because then the first number was never real. These are the things that come
+  with it either way.</p>
+  <div class="stack"><div class="row"><span class="tick">&#10003;</span><span><h3>The sample is already paid for - by me</h3><p>You are looking at finished work before a dollar moves. Most shops are asked to pay for a mockup.</p></span></div><div class="row"><span class="tick">&#10003;</span><span><h3>First 30 days of Care free with any build</h3><p>Hosting, edits, backups and uptime watch for the first month, included. After that it&#x27;s $99/mo and you can cancel anytime.</p></span></div><div class="row"><span class="tick">&#10003;</span><span><h3>No deposit, ever</h3><p>No money upfront, no bank details, no SSN. You pay after the work is delivered.</p></span></div><div class="row"><span class="tick">&#10003;</span><span><h3>$0 down if cash is tight</h3><p>$249/mo and I build it, host it and maintain it. After 12 payments the site is yours outright - then it drops to Care at $99.</p></span></div><div class="row"><span class="tick">&#10003;</span><span><h3>The sample stays up 30 days</h3><p>After that I take it down. No pressure tactics beyond that - it&#x27;s just not fair to leave another shop&#x27;s site sitting on my hosting.</p></span></div></div>
+</section>
+
+<section class="reveal" id="call">
+  <div class="eyebrow">The call</div>
+  <h2>Ten minutes, three questions</h2>
+  <ol class="steps">
+    <li><strong>Is anything on the sample wrong?</strong> Hours, address, services,
+    phone &mdash; I built it from public directories and those are often stale.</li>
+    <li><strong>What do you actually want it to do?</strong> Ring the phone, take
+    bookings, show a menu, stop sending people to a dead link.</li>
+    <li><strong>Which of the two prices works for you?</strong> That's the whole
+    decision. If it's neither, that's a fine answer and we're done.</li>
+  </ol>
+  <p>No slides, no contract to sign on the phone, and no payment taken during the call.</p>
+  <div class="cta">
+    <a class="btn" href="tel:9074147574">Call 907-414-7574</a>
+    <a class="btn ghost" href="sms:9074147574?body=Saw%20the%20sample%20site%20you%20built%20for%20Krazy%20Moose%20Subs%20-%20">Text me a time</a>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="eyebrow">Straight answers</div>
+  <h2>The questions everyone asks</h2>
+    <details><summary>How much?</summary><p>Fifteen hundred once and it&#x27;s yours, or two forty-nine a month with nothing down and I host and maintain it. Upkeep after the build is ninety-nine a month and you can cancel anytime. I&#x27;ll say the number before you ask - no discovery call games.</p></details>
+  <details><summary>I already have a Facebook page.</summary><p>You do, and it works - but you can&#x27;t rank on Google with it, you don&#x27;t own it, and if Facebook changes something you have no recourse. The site doesn&#x27;t replace the page, it&#x27;s the thing Google can show when somebody searches your name.</p></details>
+  <details><summary>I&#x27;m not technical.</summary><p>That&#x27;s the point of the upkeep plan. You text me the new hours or a photo and I change it. You never log into anything.</p></details>
+  <details><summary>What if I don&#x27;t like it?</summary><p>Then you don&#x27;t pay. You see the sample before any money moves - that is the whole point of building it first. Nothing is due before work is delivered.</p></details>
+  <details><summary>Do you need money upfront?</summary><p>No. Never. I don&#x27;t take a deposit, I don&#x27;t need your bank details, and I will never ask for a social security number. You pay after you have the thing.</p></details>
+  <details><summary>Are you local?</summary><p>Yes - Wasilla. Two of my live sites are Valley businesses: Beauty Luxe AK on Knik-Goose Bay, and A Five Star Drywall. You can call either one and ask about me.</p></details>
+</section>
+
+<footer>
+  <strong>Digital Consulting Studios</strong> &middot; 2788 N Breezy Meadows Loop, Palmer, AK 99645<br>
+  907-414-7574 &middot; <a href="mailto:digitalconsultingstudios@gmail.com">digitalconsultingstudios@gmail.com</a><br><br>
+  This page was built unsolicited for Krazy Moose Subs as a sample of our work. It is marked
+  no-index and is not published to search engines. We are not affiliated with any
+  directory, review site, or delivery platform mentioned here. Want it taken down? Reply
+  to the message that brought you here with &ldquo;no thanks&rdquo; and it is deleted the
+  same day, permanently, with no further contact of any kind.
+</footer>
+
+</div>
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
